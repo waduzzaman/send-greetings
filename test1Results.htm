@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=page-width, initial-scale=1.0">
+   <title>Test1 Hands-On</title>
+   <link rel="stylesheet" href="test1.css" />
+   <link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+   <script src="test1Moderizer.js"></script>
+</head>
+
+<body>
+   <div class="container">
+      <header>
+         <h1>
+            Bread and Beyond              
+         </h1>
+      </header>
+   
+      <nav>
+         <ul>
+            <li><a href="#">Birthday </a></li>
+            <li><a href="#">Anniversary</a></li>
+            <li><a href="#">Wedding</a></li>
+            <li><a href="#">Other Occasion</a></li>
+         </ul>
+      </nav>
+   </div>
+      
+   <article>
+      <h2>Your form has been submitted</h2>
+      <div class="results">
+         <h3>You entered the following data:</h3>
+   
+         <script>
+             var formData = location.search;
+             formData = formData.substring(1, formData.length);
+             while (formData.indexOf("+") !== -1) {
+                formData = formData.replace("+", " ");
+             }
+             formData = decodeURIComponent(formData);
+             var formArray = formData.split("&");
+             for (var i = 0; i < formArray.length; i = i + 1) {
+                document.write("<p>" + formArray[i] + "</p>");
+             }
+         </script>
+      </div>
+   </article>
+     <footer id="footer" >
+<h6 id="Copyright">&copy;&nbsp;Copyright Md Mahbub E Waduzzaman - COMP125-005 | 
+Winter 2021</h6>
+	<h5 id="homePage"><span lang="en-ca"><a href="../index.html">Homepage</a></span></h5>
+</footer>
+
+</body>
+</html>
